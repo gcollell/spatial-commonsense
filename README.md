@@ -8,7 +8,7 @@ h5py (if we want to store model weights)
 
 # Download data 
 
-Download the following .json data files from the Visual Genome dataset. 
+Download the following .json data files from the Visual Genome dataset (https://visualgenome.org/api/v0/api_home.html). 
 
 - image_data.json
 - relationships.json
@@ -23,7 +23,6 @@ In the terminal, cd to the ./code folder of this repository. Run:
 python pre-process_data.py
 
 passing the right paths and desired choices (i.e., implicit, explicit, or all relations) as arguments. See --help for details.
-
 
 
 # Train and evaluate the model
