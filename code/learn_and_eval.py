@@ -13,10 +13,10 @@ def main():
     # General arguments:
     parser.add_argument('--relations', default='impl', help='Relationship type. OPTIONS: impl, expl')
     parser.add_argument('--model_type', default='PIX', help='OPTIONS: REG, PIX')
-    parser.add_argument('--n_side_pixl', default=15, help='Number of pixels as output of PIX')
+    parser.add_argument('--n_side_pixl', default=15, type=int, help='Number of pixels as output of PIX')
     parser.add_argument('--method_compare', default=['emb','rnd','onehot','ctrl'],
                         help='Methods to compare. OPTIONS: init, rnd, onehot, ctrl')
-    parser.add_argument('--n_folds', default=10, help='Number of cross-validation folds')
+    parser.add_argument('--n_folds', default=10, type=int, help='Number of cross-validation folds')
     parser.add_argument('--eval_generalized_set', default= 'words',
                         help='Whether we evaluate in a generalized set or not. If so, instances are left out for training. '
                              'OPTIONS: None, triplets, words')
@@ -25,9 +25,9 @@ def main():
                              'seeing these words/triplets during training. BE CAREFUL! Do not use the same list as in generalized above'
                              '(because you will not find any tuple for the clean set if you have removed them first!) '
                              'OPTIONS: None, triplets, words')
-    parser.add_argument('--save_indiv_predictions', default=False, help='To store model predictions (they can be heavy, especially in PIX). '
+    parser.add_argument('--save_indiv_predictions', default=False, type=bool, help='To store model predictions (they can be heavy, especially in PIX). '
                                                                         'Useful to visualize them afterwards.')
-    parser.add_argument('--save_model', default=False, help='To store the models (e.g., to explore weights afterwards)')
+    parser.add_argument('--save_model', default=False, type=bool, help='To store the models (e.g., to explore weights afterwards)')
 
     args = parser.parse_args()
 
