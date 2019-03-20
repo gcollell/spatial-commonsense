@@ -5,6 +5,7 @@ import read_data as rd
 import data_tools as dt
 import models
 import eval_tools as et
+from param_tools import bool_str
 
 def main():
 
@@ -25,9 +26,9 @@ def main():
                              'seeing these words/triplets during training. BE CAREFUL! Do not use the same list as in generalized above'
                              '(because you will not find any tuple for the clean set if you have removed them first!) '
                              'OPTIONS: None, triplets, words')
-    parser.add_argument('--save_indiv_predictions', default=False, type=bool, help='To store model predictions (they can be heavy, especially in PIX). '
+    parser.add_argument('--save_indiv_predictions', default=False, type=bool_str, help='To store model predictions (they can be heavy, especially in PIX). '
                                                                         'Useful to visualize them afterwards.')
-    parser.add_argument('--save_model', default=False, type=bool, help='To store the models (e.g., to explore weights afterwards)')
+    parser.add_argument('--save_model', default=False, type=bool_str, help='To store the models (e.g., to explore weights afterwards)')
 
     args = parser.parse_args()
 

@@ -23,7 +23,13 @@ def get_default_params(model_type):
     return par_learning
 
 
-
+def bool_str(s):
+    if s.lower() in ['true', 't', 'yes']:
+        return True
+    elif s.lower() in ['false', 'f', 'no']:
+        return False
+    else:
+        raise ValueError('Please, use True / False as boolean arguments')
 
 
 
