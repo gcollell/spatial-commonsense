@@ -3,6 +3,10 @@ import write_data
 import data_tools
 import argparse
 
+# IMPORTANT: this code assumes we use the version 1.2 of Visual Genome (https://visualgenome.org). This matters for
+#            the relationships.json file, which changed substantially w.r.t. previous and posterior versions. The
+#            file image_data.json does not change across versions.
+
 ###########################
 #  get TRAINING DATA      #
 ###########################
