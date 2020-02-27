@@ -8,10 +8,10 @@ h5py (if we want to store model weights)
 
 # Download data 
 
-Download the following .json data files from the Visual Genome dataset (https://visualgenome.org/api/v0/api_home.html). 
+Download the following .json data files from version 1.2 of Visual Genome dataset (https://visualgenome.org/api/v0/api_home.html). 
 
-- image_data.json
-- relationships.json
+- image_data.json 
+- relationships_v1_2.json
 
 Notice that we do not require actual images for our setting but only coordinates and bounding boxes. Assume we store the two files above in ./visualgenome folder.
 

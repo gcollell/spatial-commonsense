@@ -25,7 +25,7 @@ def main():
     with open(args.inFolder + 'image_data.json') as tweetfile:
         img_metadata = json.loads(tweetfile.read())
     # --- RELATIONSHIPS --- #
-    with open(args.inFolder + 'relationships.json') as tweetfile:
+    with open(args.inFolder + 'relationships_v1_2.json') as tweetfile:
         relationships = json.loads(tweetfile.read())
 
     # Explicit spatial relationships
